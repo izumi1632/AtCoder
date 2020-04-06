@@ -18,17 +18,16 @@ def solve():
                         elif judge(i + k, j + l, W, H, S) == True:
                             c += 1
                 if c == 0:
-                    lis[i][j]= '0'
+                    lis[i][j] = '0'
                 else:
                     lis[i][j] = str(c)
-
 
     for i in range(H):
         print(''.join(map(str, lis[i])))
 
 # 位置が正しいかを判定
 def judge(x, y, W, H, S):
-    if (x < 0 or x > H - 1 or y < 0 or y >W - 1) == True:
+    if (x < 0 or x > H - 1 or y < 0 or y > W - 1) == True:
         return False
     else:
         if S[x][y] == '#':
@@ -36,10 +35,10 @@ def judge(x, y, W, H, S):
         else:
             return False
 
+
 def main():
     solve()
 
 
 if __name__ == '__main__':
     main()
-
